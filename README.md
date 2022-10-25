@@ -10,7 +10,7 @@ Utkrisht Singh (https://github.com/utkrisht5)
 
 Shivani Saraswat(https://github.com/shivani1706)
 
-Umang Tripathi(https://github.com/
+Umang Tripathi(https://github.com/Umang1103)
 
 Proposed Featues :
 
