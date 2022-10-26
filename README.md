@@ -36,7 +36,7 @@ Proposed Featues :
 
 Tech Stack :
 
-frontend-React Js and Redux
+frontend-React Js and Redux,Tailwind
 
 backend-NodeJs and expressJs
 
