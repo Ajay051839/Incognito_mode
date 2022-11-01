@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://Utkrisht123:Utkrisht123@incognitomode.xtxc0m3.mongodb.net/?retryWrites=true&w=majority",
+    "jwtsecret": "Incognito_mode"
+}
