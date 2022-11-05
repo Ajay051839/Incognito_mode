@@ -1,8 +1,10 @@
-Shinchan Movie Hunt
+# Shinchan Movie Hunt
 
-Team Name : Incognito_mode
 
-Team Members Name :
+## Team Name : Incognito_mode
+
+
+## Team Members Name :
 
 Ajay Patel (https://github.com/Ajay051839)
 
@@ -12,7 +14,8 @@ Shivani Saraswat(https://github.com/shivani1706)
 
 Umang Tripathi(https://github.com/Umang1103)
 
-Proposed Featues :
+
+## Proposed Featues :
 
 1.Login signup
 
@@ -34,7 +37,8 @@ Proposed Featues :
 
 10.Notifications for new chats or new movies.
 
-Tech Stack :
+
+## Tech Stack :
 
 frontend-React Js and Redux,Tailwind
 
