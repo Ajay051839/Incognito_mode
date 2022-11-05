@@ -5,6 +5,7 @@ const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../../models/User');
+const auth = require('../../middleware/auth');
 const config = require('config');
 
 router.post(
@@ -65,5 +66,25 @@ router.post(
     }
   }
 );
+
+router.get('/:id', auth, async (req, res) => {
+  try {
+    const data = await User.findById({ _id: req.params.id });
+    res.json(data);
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send('Server error');
+  }
+});
+
+router.get('/', auth, async (req, res) => {
+  try {
+    const data = await User.find();
+    res.json(data);
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send('Server Error');
+  }
+});
 
 module.exports = router;

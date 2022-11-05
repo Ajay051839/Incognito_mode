@@ -3,14 +3,23 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
+// import User from '../../../../models/User';
+// import {connect} from 'react-redux'
 
-const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
+const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
+  
   const authLinks = (
     <ul>
       <li>
         <Link to='#!' onClick={logout}>
           <i className='fas fa-sign-out-alt'></i>{' '}
           <span className='hide-sm'>Logout</span>
+        </Link>
+        <Link to='/group'>
+          <span className='hide-sm'>Group</span>
+        </Link>
+        <Link to={`/invite/${user?.name}`}>
+          <span className='hide-sm'>Invites</span>
         </Link>
       </li>
     </ul>
@@ -28,10 +37,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   return (
-    <nav className='navbar bg-dark'>
+    <nav className='navbar bg-dark fixed-top'>
       <h1>
         <Link to='/dashboard'>
-          <i className='fas fa-code'></i> MusixOn
+          <i className='fas fa-code'></i> Movie Hunt
         </Link>
       </h1>
       {!loading && (
