@@ -38,7 +38,7 @@ const Landing = () => {
         
 
 
-          <button className="btn btn-lg btn-block" >Get Started</button>
+          <button className="btn btn-lg btn-block" ><Link to='/register'>Get Started</Link></button>
 
 
           {/* <button className="ml-6">Log In</button> */}

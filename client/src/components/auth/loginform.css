@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     box-sizing: border-box;
     font-family: "CustomFont";
@@ -10,7 +10,7 @@
 }
 
 /* --------------------------- MOBILE VERSION ------------------------------ */
-.page {
+/* .page {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -109,7 +109,7 @@ input:focus {
 
 
 /* -------------------- TABLET OPTIMIZATION -------------------- */
-@media only screen and (min-device-width: 37em) {
+/* @media only screen and (min-device-width: 37em) {
     .page {
         font-size: 1em;
     }
@@ -118,10 +118,10 @@ input:focus {
         width: 60%;
         height: 70%;
     }
-}
+} */
 
 /* -------------------- DESKTOP OPTIMIZATION -------------------- */
-@media only screen and (min-device-width: 64em) {
+/* @media only screen and (min-device-width: 64em) {
     .page {
         font-size: 1.25em;
     }
@@ -130,4 +130,4 @@ input:focus {
         width: 25%;
         height: 65%;
     }
-}
+} */ 

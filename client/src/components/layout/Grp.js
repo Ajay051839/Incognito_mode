@@ -13,6 +13,10 @@ const Grp = ({ members, loadMembers }) => {
     navigate(`/group/${name}/add`);
   };
 
+  const handleWatchlist = () => {
+    navigate(`/group/${name}/watchlist`)
+  }
+
   useEffect(() => {
     async function call() {
       try {
@@ -45,6 +49,7 @@ const Grp = ({ members, loadMembers }) => {
       <button className='btn btn-primary' onClick={handleAddMembers}>
         Add member
       </button>
+      <button className='btn btn-primary' onClick={handleWatchlist}>Watchlist</button>
     </div>
   );
 };

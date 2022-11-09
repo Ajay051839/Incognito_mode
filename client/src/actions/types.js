@@ -10,3 +10,5 @@ export const LOGOUT = 'LOGOUT';
 export const GET_PROFILE = 'GET_PROFILE';
 export const PROFILE_ERROR = 'PROFILE_ERROR';
 export const LOAD_MEMBERS = 'LOAD_MEMBERS';
+export const SET_MOVIES = 'SET_MOVIES';
+export const SET_MOVIE = 'SET_MOVIE';
