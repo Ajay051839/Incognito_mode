@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import './MovieDetails.css';
 
 const MovieDetails = ({ movie }) => {
   return (
-    <div>
+    <div className='hero'>
       <h2>
         {movie.name
           ? movie.name
@@ -14,13 +15,15 @@ const MovieDetails = ({ movie }) => {
           ? movie.original_title
           : movie.original_name}
       </h2>
+      <div className="im">
       <img
         src={`https://image.tmdb.org/t/p/original${
           movie.backdrop_path ? movie.backdrop_path : movie.image
         }`}
         alt=''
       />
-      <p>{movie.overview}</p>
+      </div>
+      <p className='text-bold'>{movie.overview}</p>
     </div>
   );
 };

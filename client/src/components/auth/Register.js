@@ -1,9 +1,11 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment ,useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
+import { gapi } from "gapi-script";
+import "./register.css";
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -12,6 +14,22 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     password: '',
     password2: '',
   });
+
+  useEffect(() => {
+    function start() {
+        gapi.client.init({
+            clientId: "79474543031-tmjo35916ufn421ej3u1i2ljao2apr4s.apps.googleusercontent.com",
+            scope: ""
+        })
+    }
+    gapi.load('client: auth2', start)
+})
+
+const [popupStyle, showPopup] = useState("hide")
+  const popup = () => {
+    showPopup("login-popup")
+    setTimeout(() => showPopup("hide"), 3000)
+}
 
   const { name, email, password, password2 } = formData;
 
@@ -32,6 +50,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     return <Navigate to='/dashboard' />;
   }
   return (
+    <page>
+    <cover>
     <Fragment>
       
       <h1 className='large text-primary'>Sign Up</h1>
@@ -58,10 +78,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             required
             onChange={(e) => onChange(e)}
           />
-          <small className='form-text'>
+          {/* <small className='form-text'>
             This site uses Gravatar so if you want a profile image, use a
             Gravatar email
-          </small>
+          </small> */}
         </div>
         <div className='form-group'>
           <input
@@ -85,12 +105,15 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={(e) => onChange(e)}
           />
         </div>
-        <input type='submit' className='btn btn-primary' value='Register' />
+        {/* <input type='submit' className='btn btn-primary' value='Register' /> */}
+        <div className="login-btn" onClick={popup}>Register</div>
       </form>
-      <p className='my-1'>
+      <p className='my-1 text-base'>
         Already have an account? <Link to='/login'>Sign In</Link>
       </p>
     </Fragment>
+    </cover>
+    </page>
   );
 };
 

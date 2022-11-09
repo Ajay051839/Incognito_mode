@@ -1,8 +1,7 @@
-body{
+* {
     margin: 0;
     box-sizing: border-box;
     font-family: "CustomFont";
-    background-color: rgb(114, 221, 228);
 }
 /* 
 @font-face {
@@ -11,6 +10,9 @@ body{
 } */
 
 /* --------------------------- MOBILE VERSION ------------------------------ */
+.large text-primary{
+    margin-left: 200px;
+}
 .page {
     height:85vh;
     width: 100%;
@@ -18,13 +20,12 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 1em;
-    margin:0;
-    /* background-color: rgb(114, 221, 228); */
+    background-color: rgb(114, 221, 228);
 } 
 
 .cover {
-    background-color: white;
-    width: 100%;
+    background-color: rgb(255, 255, 255);
+    width:50% !important;
     height:auto;
     position: relative;
     border-radius: 1em;
@@ -117,7 +118,7 @@ input:focus {
     }
 
     .cover {
-        width: 60%;
+        width: 88%;
         height: 70%;
     }
 } 

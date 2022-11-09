@@ -9,6 +9,7 @@ import 'swiper/css/free-mode';
 import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setMovie } from '../../actions/movie';
+import Carousel from 'react-bootstrap/Carousel';
 
 const Dashboard = ({ setMovie }) => {
   const [trending, setTrending] = useState([]);
@@ -84,9 +85,51 @@ const Dashboard = ({ setMovie }) => {
     return str.length > 15 ? str.substring(0, 14) + '...' : str;
   }
   return (
-    <div className='px-0 py-0'>
+    <>
+    
+      <Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://source.unsplash.com/1600x300/?photography,dark"
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3 className='text-white'>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 text-white"
+          src="https://source.unsplash.com/1600x300/?random,dark"
+          alt="Second slide"
+        />
+
+        <Carousel.Caption>
+        <h3 className='text-white'>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 text-white"
+          src="https://source.unsplash.com/1600x300/?media,movie,dark"
+          alt="Third slide"
+        />
+
+        <Carousel.Caption>
+        <h3 className='text-white'>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+    
+    <div className='px-0 py-3'>
       <h3>Trending Movies</h3>
-      <div className='my-4'>
+      <div className='my-2'>
         <Swiper
           freeMode={true}
           grabCursor={true}
@@ -278,9 +321,7 @@ const Dashboard = ({ setMovie }) => {
         >
           {recentlyReleased?.results?.map((movie) => (
             <SwiperSlide>
-              {/* <ProductCard
-                data={{ imgSrc: img1, price: '$10', title: 'Juicy Grapes' }}
-              /> */}
+            
               <Card className='p-0 overflow-hidden h-100 shadow'>
                 <div className='overflow-hidden rounded p-0 bg-dark'>
                   <Card.Img
@@ -418,109 +459,10 @@ const Dashboard = ({ setMovie }) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* <Row>
-          {trending?.results?.map((movie) => (
-            <Col key={movie.id} sm={12} md={6} lg={4} xl={3}>
-              <Card
-                className='my-3 p-3 rounded'
-                style={{ cursor: 'pointer' }}
-                key={movie.id}
-              >
-                <Card.Img
-                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                  style={{ height: '15vw', objectFit: 'cover' }}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <strong>{movie.title}</strong>
-                  </Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-        <h3>Top Rated Movies</h3>
-        <Row>
-          {topRated?.results?.map((movie) => (
-            <Col key={movie.id} sm={12} md={6} lg={4} xl={3}>
-              <Card
-                className='my-3 p-3 rounded'
-                style={{ cursor: 'pointer' }}
-                key={movie.id}
-              >
-                <Card.Img
-                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                  style={{ height: '15vw', objectFit: 'cover' }}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <strong>{movie.title}</strong>
-                  </Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-        <h3>Recently Released Movies</h3>
-        <Row>
-          {recentlyReleased?.results?.map((movie) => (
-            <Col key={movie.id} sm={12} md={6} lg={4} xl={3}>
-              <Card
-                className='my-3 p-3 rounded'
-                style={{ cursor: 'pointer' }}
-                key={movie.id}
-              >
-                <Card.Img
-                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                  style={{ height: '15vw', objectFit: 'cover' }}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <strong>{movie.title}</strong>
-                  </Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-        <h3>Explore Different Genre</h3>
-        <select
-          class='form-select'
-          aria-label='Default select example'
-          onChange={(e) => handleChange(e.target.value)}
-        >
-          <option selected>Select genre</option>
-          <option value='28'>Action</option>
-          <option value='35'>Comedy</option>
-          <option value='27'>Horror</option>
-          <option value='10749'>Romance</option>
-          <option value='27'>Horror</option>
-          <option value='16'>Animation</option>
-          <option value='18'>Drama</option>
-        </select>
-        <Row>
-          {genreMovies?.results?.map((movie) => (
-            <Col key={movie.id} sm={12} md={6} lg={4} xl={3}>
-              <Card
-                className='my-3 p-3 rounded'
-                style={{ cursor: 'pointer' }}
-                key={movie.id}
-              >
-                <Card.Img
-                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                  style={{ height: '15vw', objectFit: 'cover' }}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <strong>{movie.title}</strong>
-                  </Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row> */}
+        
       </div>
     </div>
+    </>
   );
 };
 
