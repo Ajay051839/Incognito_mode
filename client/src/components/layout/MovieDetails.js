@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import './MovieDetails.css';
+// import './MovieDetails.css';
 
 const MovieDetails = ({ movie }) => {
   return (
@@ -23,7 +23,7 @@ const MovieDetails = ({ movie }) => {
         alt=''
       />
       </div>
-      <p className='text-bold'>{movie.overview}</p>
+      <p className='text-bold text-black'>{movie.overview}</p>
     </div>
   );
 };

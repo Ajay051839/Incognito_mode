@@ -1,11 +1,10 @@
-import React, { useState, Fragment ,useEffect} from 'react';
+import React, { useState, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
-import { gapi } from "gapi-script";
-import "./register.css";
+
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -15,15 +14,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     password2: '',
   });
 
-  useEffect(() => {
-    function start() {
-        gapi.client.init({
-            clientId: "79474543031-tmjo35916ufn421ej3u1i2ljao2apr4s.apps.googleusercontent.com",
-            scope: ""
-        })
-    }
-    gapi.load('client: auth2', start)
-})
+  
 
 const [popupStyle, showPopup] = useState("hide")
   const popup = () => {
@@ -83,7 +74,7 @@ const [popupStyle, showPopup] = useState("hide")
             Gravatar email
           </small> */}
         </div>
-        <div className='form-group'>
+        <div className='form-group'> 
           <input
             type='password'
             placeholder='Password'

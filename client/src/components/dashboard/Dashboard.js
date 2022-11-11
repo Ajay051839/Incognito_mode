@@ -95,20 +95,20 @@ const Dashboard = ({ setMovie }) => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3 className='text-white'>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3 className='text-white'>If you are good at something, never do it for free.</h3>
+          
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100 text-white"
-          src="https://source.unsplash.com/1600x300/?random,dark"
+          src="https://source.unsplash.com/1600x300/?thrones,movies,reels,dark"
           alt="Second slide"
         />
 
         <Carousel.Caption>
-        <h3 className='text-white'>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h3 className='text-white'>I will make you an offer, you can't refuse.</h3>
+          
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -119,10 +119,8 @@ const Dashboard = ({ setMovie }) => {
         />
 
         <Carousel.Caption>
-        <h3 className='text-white'>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+        <h3 className='text-white'>If you think this has a happy ending, you haven't been paying attention.</h3>
+          
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

@@ -14,8 +14,7 @@ const Container=styled.div`
 height:90vh;
 width:100vw;
 img{
-    my-10;
-    margin-top:70px;
+    margin-top:0px;
     height:100vh;
     width:100vw;
     opacity:0.9;

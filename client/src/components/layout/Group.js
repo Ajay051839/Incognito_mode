@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import store from '../../store';
 import { useNavigate } from 'react-router-dom';
 
+
 const Group = ({ setAlert }) => {
   const navigate = useNavigate();
   const [grps, setGrps] = useState([]);
